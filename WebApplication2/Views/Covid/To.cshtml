@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApplication2.Models.covid>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.province)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.observationdate)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.LastUpdate)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.deaths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recovered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.confirmed)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.province)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.country)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.observationdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastUpdate)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.deaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recovered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.confirmed)
+            </td>
+
+        </tr>
+    }
+
+</table>
